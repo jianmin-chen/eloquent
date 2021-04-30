@@ -1,0 +1,148 @@
+:root {
+	--bg-color: white;
+	--text-color: black;
+	--md-char-color: #f1f1f1;
+	--meta-content-color: #0099ff;
+
+	--primary-color: #454545;
+	--primary-btn-border-color: transparent;
+	--primary-btn-text-color: white;
+
+	--active-file-bg-color: #273036;
+	--active-file-text-color: #f1f1f1;
+	--ative-file-border-color: #273036;
+
+	--side-bar-bg-color: #f1f1f1;
+	--item-hover-bg-color: #f1f1f1;
+	--item-hover-text-color: var(--primary-color);
+	--monospace: "Fira Code", monospace;
+}
+
+/*
+ * Note: Font locations(i.e, src) are referenced outside of theme folder, as CSS file should be outside of folder.
+ */
+@font-face {
+	font-family: "Fira Code";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Fira Code"), url("./eloquent/fonts/FiraCode.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Libre Baskerville";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Libre Baskerville"), url("./eloquent/fonts/LibreBaskerville.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Lato"), url("./eloquent/fonts/Lato.ttf") format("truetype");
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body, html {
+	background-color: var(--bg-color);
+	font: normal 1rem "Lato", sans-serif;
+}
+
+/*
+ * Editor
+ */
+#write {
+	font: normal 0.9rem "Libre Baskerville", serif;
+	line-height: 1.6;
+	word-wrap: break-word;
+	max-width: 50em;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		/*
+		 * Narrow layout
+		 */
+		max-width: 914px;
+	}
+}
+
+a {
+	/*
+	 * Links
+	 */
+	color: #0099ff;
+}
+
+blockquote {
+	/*
+	 * Quotes
+	 */
+	font-size: 1.2rem;
+}
+
+/*
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+	color: var(--primary-color);
+	font-family: "Lato", sans-serif;
+	text-transform: uppercase;
+}
+h1 {
+	border-bottom: 1px solid var(--primary-color);
+	padding: 5px 0;
+	text-align: center;
+}
+h2:before, h3:before, h4:before, h5:before, h6:before {
+	border-top: 5px solid var(--primary-color);
+	content: "";
+	display: block;
+	margin-top: 25px;
+	width: 30px;
+	height: 30px;
+}
+
+img {
+	/*
+	 * Images
+	 */
+	margin: 5px 0;
+	max-width: 100%;
+}
+
+/*
+ * Tables
+ */
+table {
+	border-collapse: collapse;
+	font-family: "Lato", sans-serif;
+	overflow-x: scroll;
+}
+
+thead > tr, tr:nth-child(even) {
+	background-color: #f1f1f1;
+}
+
+th {
+	font-style: italic;
+}
+
+th, td {
+	border: 1px solid #f1f1f1;
+	padding: 7px 14px;
+	text-align: left !important;
+}
+
+.cm-s-inner {
+	/*
+	 * Code fences
+	 */
+	border-top: 1px solid var(--primary-color);
+	border-bottom: 1px solid var(--primary-color);
+	padding: 15px 0;
+}
