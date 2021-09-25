@@ -118,7 +118,7 @@ table th:last-child, table td:last-child {
     margin-bottom: 0;
 }
 
-.cm-s-inner {
+.cm-s-inner, .md-meta-block {
     /*
      * Code fences
      */
@@ -126,6 +126,14 @@ table th:last-child, table td:last-child {
     border-bottom: 1px solid var(--primary-color);
     font-family: "IBM Plex", monospace;
     padding: 15px 0;
+}
+
+.md-meta-block {
+    /*
+     * front matter
+     */
+    background-color: white !important;
+    padding: 15px;
 }
 
 @media only screen and (min-width: 1400px) {
